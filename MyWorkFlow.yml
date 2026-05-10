@@ -1,0 +1,11 @@
+name: My First Workflow
+on: [push, workflow_dispatch] # Runs on push AND manually
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run a command
+        run: echo "Hello, GitHub Actions!"
